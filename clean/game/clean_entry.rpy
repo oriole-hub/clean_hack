@@ -286,7 +286,7 @@ screen role_selection_entry_screen():
                             background Solid("#00000000")
                             padding (2, 0)
                             xfill True
-                            ysize 36
+                            yminimum 36
                             if is_done:
                                 text "✓ Сдано [sp_tasks_done]/[sp_tasks_total] задач • Специальность завершена":
                                     size 10
@@ -517,7 +517,7 @@ screen role_selection_entry_screen():
 
                     frame:
                         xsize 548
-                        ysize 120
+                        yminimum 120
                         background Frame(Solid("#0f223d"), 8, 8)
                         padding (14, 10)
                         vbox:

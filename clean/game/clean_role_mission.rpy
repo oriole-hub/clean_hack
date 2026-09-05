@@ -332,7 +332,7 @@ screen clean_role_mission_screen():
                         background Frame(Solid("#2c2c2e"), 12, 12)
                         padding (16, 14)
                         xfill True
-                        ysize 170
+                        yminimum 120
                         vbox:
                             spacing 6
                             text "Объяснение":
@@ -1625,7 +1625,7 @@ screen mission_tutorial_modal():
 
                 frame:
                     xsize 390
-                    ysize 130
+                    yminimum 130
                     background Frame(Solid("#2c2c2e"), 12, 12)
                     padding (16, 14)
                     vbox:
@@ -1641,7 +1641,7 @@ screen mission_tutorial_modal():
 
                 frame:
                     xsize 390
-                    ysize 130
+                    yminimum 130
                     background Frame(Solid("#2c2c2e"), 12, 12)
                     padding (16, 14)
                     vbox:
@@ -1657,7 +1657,7 @@ screen mission_tutorial_modal():
 
                 frame:
                     xsize 390
-                    ysize 130
+                    yminimum 130
                     background Frame(Solid("#2c2c2e"), 12, 12)
                     padding (16, 14)
                     vbox:
@@ -1673,7 +1673,7 @@ screen mission_tutorial_modal():
 
                 frame:
                     xsize 390
-                    ysize 130
+                    yminimum 130
                     background Frame(Solid("#2c2c2e"), 12, 12)
                     padding (16, 14)
                     vbox:

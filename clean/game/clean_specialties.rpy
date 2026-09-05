@@ -202,10 +202,10 @@ screen clean_specialties_screen():
                             background Frame(Solid("#102647" if t_item.completed else "#0c1a30"), 8, 8)
                             padding (20, 16)
                             xsize 450
-                            ysize 440
+                            yminimum 450
 
                             vbox:
-                                spacing 10
+                                spacing 8
 
                                 # Бейджи сложности и очков
                                 hbox:
@@ -235,26 +235,24 @@ screen clean_specialties_screen():
 
                                 # Заголовок задачи
                                 text "[t_item.title]":
-                                    size 17
+                                    size 16
                                     color "#ffffff"
                                     bold True
                                     line_spacing 2
-                                    ysize 48
 
                                 # Сценарий
                                 text "[t_item.scenario]":
                                     size 12
                                     color "#cbd5e1"
                                     line_spacing 2
-                                    ysize 110
 
                                 # Цель
                                 frame:
                                     background Solid("#081224")
-                                    padding (8, 6)
+                                    padding (10, 8)
                                     xfill True
                                     vbox:
-                                        spacing 2
+                                        spacing 3
                                         text "ЦЕЛЬ:":
                                             size 10
                                             color "#38bdf8"
@@ -263,7 +261,6 @@ screen clean_specialties_screen():
                                             size 11
                                             color "#e2e8f0"
                                             line_spacing 2
-                                            ysize 45
 
                                 # Стек
                                 text "Стек: [t_item.tech_stack]":
