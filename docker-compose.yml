@@ -1,0 +1,9 @@
+services:
+  clean-web:
+    build:
+      context: ./clean
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    container_name: clean-web
