@@ -1,0 +1,10 @@
+*.rpyc
+game/cache/
+game/saves/
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+log.txt
+traceback.txt
+errors.txt
