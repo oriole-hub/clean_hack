@@ -522,7 +522,7 @@ screen clean_role_mission_screen():
                             pos (700, 70)
                             background Frame(Solid("#3a1008"), 8, 8)
                             padding (12, 6)
-                            text "✗ Это чистая вода":
+                            text "✗ Это не вода":
                                 size 13
                                 color "#fca5a5"
                                 bold True
