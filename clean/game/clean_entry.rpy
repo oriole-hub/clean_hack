@@ -89,11 +89,19 @@ screen role_selection_entry_screen():
     $ total_tasks_cnt = clean_state.get_total_tasks_count()
     $ all_done = clean_state.all_specialties_completed()
 
-    vbox:
+    viewport:
+        scrollbars None
+        draggable True
+        mousewheel True
         xalign 0.5
-        ypos 30
-        spacing 8
-        xsize 1020
+        ypos 20
+        xsize 1920
+        ysize 1040
+
+        vbox:
+            xalign 0.5
+            spacing 8
+            xsize 1020
 
         # ВЕРХНИЙ БЛОК: ЗАГОЛОВОК И ПРОГРЕСС
         vbox:

@@ -72,9 +72,16 @@ screen clean_prologue_screen():
         background Frame(Solid("#09172c"), 16, 16)
         padding (40, 30)
 
-        vbox:
-            spacing 18
+        viewport:
+            scrollbars None
+            draggable True
+            mousewheel True
             xfill True
+            yfill True
+
+            vbox:
+                spacing 18
+                xfill True
 
             # ВЕРХНЯЯ СТРОКА: ИНДИКАТОР 4 ЭТАПОВ И КНОПКА ПРОПУСКА
             hbox:
