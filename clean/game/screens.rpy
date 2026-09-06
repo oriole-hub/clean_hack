@@ -303,8 +303,6 @@ screen navigation():
 
             textbutton _("Челленджи волонтеров") action Show("challenge_catalog_screen")
 
-            textbutton _("Кабинет ООПТ") action Show("oopt_cabinet_screen")
-
             textbutton _("Рейтинг лидеров") action Show("clean_leaderboard_screen")
 
         else:
@@ -314,8 +312,6 @@ screen navigation():
             textbutton _("Сохранить") action ShowMenu("save")
 
         textbutton _("Загрузить") action ShowMenu("load")
-
-        textbutton _("Настройки") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -445,18 +441,6 @@ screen main_menu():
                         xalign 0.5
 
                 button:
-                    action Show("oopt_cabinet_screen")
-                    background Frame(Solid("#0f223d"), 8, 8)
-                    hover_background Frame(Solid("#1e40af"), 8, 8)
-                    padding (18, 12)
-                    xfill True
-                    text "🏛️ Кабинет ООПТ (Модерация)":
-                        size 15
-                        color "#ffffff"
-                        bold True
-                        xalign 0.5
-
-                button:
                     action Show("clean_leaderboard_screen")
                     background Frame(Solid("#0f223d"), 8, 8)
                     hover_background Frame(Solid("#1e40af"), 8, 8)
@@ -466,17 +450,6 @@ screen main_menu():
                         size 15
                         color "#ffffff"
                         bold True
-                        xalign 0.5
-
-                button:
-                    action ShowMenu("preferences")
-                    background Frame(Solid("#1e293b"), 8, 8)
-                    hover_background Frame(Solid("#334155"), 8, 8)
-                    padding (18, 10)
-                    xfill True
-                    text "⚙️ Настройки":
-                        size 14
-                        color "#cbd5e1"
                         xalign 0.5
 
                 button:
