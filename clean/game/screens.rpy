@@ -357,8 +357,138 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
     tag menu
+
+    # Задний фон и графический оверлей
+    add Solid("#060d19")
+    add "images/satellite/level3_ortho.png":
+        xsize 1920
+        ysize 1080
+        fit "cover"
+        alpha 0.25
+
+    # Затемнение под интерфейс
+    add Solid("#09172cc8")
+
+    # Левая панель с заголовком и меню
+    frame:
+        xpos 80
+        yalign 0.5
+        xsize 580
+        background Frame(Solid("#0b1c35e6"), 16, 16)
+        padding (40, 36)
+
+        vbox:
+            spacing 20
+            xfill True
+
+            # Брендинг проекта
+            vbox:
+                spacing 6
+                text "🌊 ЧИСТЫЙ БЕРЕГ":
+                    size 34
+                    color "#00e6b8"
+                    bold True
+                text "ДЗЗ, ГИС и Эко-Мониторинг Побережья":
+                    size 14
+                    color "#38bdf8"
+                    bold True
+                text "Версия 1.0 • Web & GIS Simulator":
+                    size 11
+                    color "#64748b"
+
+            # Линия
+            frame:
+                background Solid("#1e293b")
+                xfill True
+                ysize 2
+
+            # Кнопки навигации главного меню
+            vbox:
+                spacing 10
+                xfill True
+
+                button:
+                    action Start()
+                    background Frame(Solid("#00e6b8"), 8, 8)
+                    hover_background Frame(Solid("#38bdf8"), 8, 8)
+                    padding (18, 12)
+                    xfill True
+                    text "🚀 Начать экспедицию (Пролог)":
+                        size 15
+                        color "#041122"
+                        bold True
+                        xalign 0.5
+
+                button:
+                    action Show("role_selection_entry_screen")
+                    background Frame(Solid("#0f223d"), 8, 8)
+                    hover_background Frame(Solid("#1e40af"), 8, 8)
+                    padding (18, 12)
+                    xfill True
+                    text "🎯 Выбор специальности (6 ролей)":
+                        size 15
+                        color "#ffffff"
+                        bold True
+                        xalign 0.5
+
+                button:
+                    action Show("challenge_catalog_screen")
+                    background Frame(Solid("#0f223d"), 8, 8)
+                    hover_background Frame(Solid("#1e40af"), 8, 8)
+                    padding (18, 12)
+                    xfill True
+                    text "🔥 Волонтерские челленджи":
+                        size 15
+                        color "#ffffff"
+                        bold True
+                        xalign 0.5
+
+                button:
+                    action Show("oopt_cabinet_screen")
+                    background Frame(Solid("#0f223d"), 8, 8)
+                    hover_background Frame(Solid("#1e40af"), 8, 8)
+                    padding (18, 12)
+                    xfill True
+                    text "🏛️ Кабинет ООПТ (Модерация)":
+                        size 15
+                        color "#ffffff"
+                        bold True
+                        xalign 0.5
+
+                button:
+                    action Show("clean_leaderboard_screen")
+                    background Frame(Solid("#0f223d"), 8, 8)
+                    hover_background Frame(Solid("#1e40af"), 8, 8)
+                    padding (18, 12)
+                    xfill True
+                    text "🏆 Рейтинг лидеров":
+                        size 15
+                        color "#ffffff"
+                        bold True
+                        xalign 0.5
+
+                button:
+                    action ShowMenu("preferences")
+                    background Frame(Solid("#1e293b"), 8, 8)
+                    hover_background Frame(Solid("#334155"), 8, 8)
+                    padding (18, 10)
+                    xfill True
+                    text "⚙️ Настройки":
+                        size 14
+                        color "#cbd5e1"
+                        xalign 0.5
+
+                button:
+                    action ShowMenu("about")
+                    background Frame(Solid("#1e293b"), 8, 8)
+                    hover_background Frame(Solid("#334155"), 8, 8)
+                    padding (18, 10)
+                    xfill True
+                    text "ℹ️ Об игре и проекте":
+                        size 14
+                        color "#cbd5e1"
+                        xalign 0.5
 
 
 style main_menu_frame is empty
